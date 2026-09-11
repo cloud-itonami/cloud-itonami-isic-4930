@@ -2472,7 +2472,7 @@ img,svg { max-width: 100%; height: auto; }
   <h1>Transport via pipeline (ISIC 4930) — Operator Console</h1>
 </header>
 <p><span class="badge">read-only sample</span> <span class="badge">governor-gated</span> <span class="badge">administrative / logistics coordination only</span></p>
-<p class="subtitle">Generated at build time by <code>pipelineops.render-html</code> (<code>clojure -M:dev:render-html</code>) by actually running this repo's actor: <code>pipelineops.operation</code> (a compiled langgraph StateGraph) over <code>pipelineops.advisor</code> &rarr; <code>pipelineops.governor</code> &rarr; <code>pipelineops.phase</code> &rarr; <code>pipelineops.store</code>. Every id, number, verdict and violation below was read back out of the store after the run.</p>
+<p class="subtitle">Generated at build time by <code>pipelineops.render-html</code> (<code>kbb -M:dev:render-html</code>) by actually running this repo's actor: <code>pipelineops.operation</code> (a compiled langgraph StateGraph) over <code>pipelineops.advisor</code> &rarr; <code>pipelineops.governor</code> &rarr; <code>pipelineops.phase</code> &rarr; <code>pipelineops.store</code>. Every id, number, verdict and violation below was read back out of the store after the run.</p>
 <div class="note">
   <p><strong>Scope.</strong> This actor coordinates the back-office side of a pipeline-transport operator: flow-volume/billing telemetry logging, integrity-inspection and right-of-way crew scheduling, maintenance-crew/equipment procurement with registered contractors, and integrity-concern flagging for human triage. It <strong>never</strong> sets, adjusts or overrides a pipeline operating parameter (pressure, flow rate, valve state, emergency shutoff), never finalizes an integrity-safety clearance, and never actuates anything on a live line. That exclusion is a permanent, un-overridable HARD block in <code>pipelineops.governor/scope-exclusion-violations</code>, exercised twice on this page.</p>
 </div>
@@ -2661,6 +2661,6 @@ img,svg { max-width: 100%; height: auto; }
 </main>
 <footer>
   <p>Seed directory: <code>pipelineops.store/demo-data</code> — segment and contractor identity on this page comes from there and nowhere else. Volumes, custody-transfer ids, inspection dates and costs are caller-supplied request inputs; this actor has no seeded throughput corpus. The page is deterministic: no timestamps, no clock reads, no randomness, every collection either append-ordered by the store or explicitly sorted — two consecutive builds are byte-identical.</p>
-  <p>Regenerate with <code>clojure -M:dev:render-html</code>. The generator refuses to write this file if the run produces zero HARD governor holds.</p>
+  <p>Regenerate with <code>kbb -M:dev:render-html</code>. The generator refuses to write this file if the run produces zero HARD governor holds.</p>
 </footer>
 </body></html>
