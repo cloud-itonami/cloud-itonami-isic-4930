@@ -1,6 +1,6 @@
 (ns pipelineops.phase-test
   "Unit tests of `pipelineops.phase` rollout logic."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [pipelineops.phase :as phase]))
 
 (deftest phase-0-read-only
