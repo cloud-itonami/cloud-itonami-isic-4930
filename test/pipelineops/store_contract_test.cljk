@@ -1,6 +1,6 @@
 (ns pipelineops.store-contract-test
   "Contract tests for `pipelineops.store/Store` protocol."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [pipelineops.store :as store]))
 
 (deftest mem-store-segment-lookup

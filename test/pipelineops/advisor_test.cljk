@@ -1,6 +1,6 @@
 (ns pipelineops.advisor-test
   "Unit tests of `pipelineops.advisor` proposal generation."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [pipelineops.advisor :as adv]
             [pipelineops.store :as store]))
 
